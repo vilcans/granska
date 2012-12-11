@@ -13,7 +13,7 @@
             </tr>
             {% for item in items %}
                 <tr>
-                    <td>{{ item.file|e }}</td>
+                    <td>{{ item.file|e }}:{{ item.line }}</td>
                     <td>{{ item.type|e }}</td>
                     <td>{{ item.comment|e }}</td>
                 </tr>
