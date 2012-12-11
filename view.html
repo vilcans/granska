@@ -5,19 +5,20 @@
     </head>
     <body>
         <h1>To fix</h1>
-        <table>
-            <tr>
-                <th>File</th>
-                <th>Type</th>
-                <th>Comment</th>
-            </tr>
-            {% for item in items %}
+        {% for type in types %}
+            <h2>{{type}}</h2>
+            <table>
                 <tr>
-                    <td>{{ item.file|e }}:{{ item.line }}</td>
-                    <td>{{ item.type|e }}</td>
-                    <td>{{ item.comment|e }}</td>
+                    <th>File</th>
+                    <th>Comment</th>
                 </tr>
-            {% endfor %}
-        </ul>
+                {% for item in type_to_items[type] %}
+                    <tr>
+                        <td>{{ item.file|e }}:{{ item.line }}</td>
+                        <td>{{ item.comment|e }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
     </body>
 </html>
