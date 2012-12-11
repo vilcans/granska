@@ -1,10 +1,12 @@
 body {
     background: #686;
     color: black;
+    font-family: sans;
 }
 table {
     border: none;
     background: #686;
+    width: 100%;
 }
 th {
     text-align: left;
@@ -12,10 +14,10 @@ th {
 td {
     vertical-align: top;
 }
-tr:nth-child(odd) {
-    background: #cfc;
+th:nth-child(1) {
+    width: 66%;
 }
-tr:nth-child(even) {
+tr {
     background: #fff;
 }
 tr:nth-child(1) {
