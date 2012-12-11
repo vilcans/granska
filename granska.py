@@ -11,10 +11,11 @@ template = Template(open(my_dir + '/view.html').read())
 types = (
     'REVIEW',
     'TODO',
+    'FIXME',
 )
 type_to_items = {}
 
-comment_re = re.compile('(' + '|'.join(types) + r')\s*:\s*(.*)')
+comment_re = re.compile('(' + '|'.join(types) + r')\s*:?\s*(.*)')
 
 items = []
 
