@@ -1,0 +1,23 @@
+body {
+    background: #686;
+    color: black;
+}
+table {
+    border: none;
+    background: #686;
+}
+th {
+    text-align: left;
+}
+td {
+    vertical-align: top;
+}
+tr:nth-child(odd) {
+    background: #cfc;
+}
+tr:nth-child(even) {
+    background: #fff;
+}
+tr:nth-child(1) {
+    background: #ccc;
+}

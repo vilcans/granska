@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>To fix</h1>
+        <table>
+            <tr>
+                <th>File</th>
+                <th>Type</th>
+                <th>Comment</th>
+            </tr>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.file|e }}</td>
+                    <td>{{ item.type|e }}</td>
+                    <td>{{ item.comment|e }}</td>
+                </tr>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
