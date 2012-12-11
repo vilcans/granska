@@ -6,13 +6,16 @@
     <body>
         <h1>To fix</h1>
         {% for type in types %}
+            {{type}}: {{type_to_items[type] | length}}
+        {% endfor %}
+        {% for type, items in type_to_items.items() %}
             <h2>{{type}}</h2>
             <table>
                 <tr>
                     <th>File</th>
                     <th>Comment</th>
                 </tr>
-                {% for item in type_to_items[type] %}
+                {% for item in items %}
                     <tr>
                         <td>{{ item.file|e }}:{{ item.line }}</td>
                         <td>{{ item.comment|e }}</td>
